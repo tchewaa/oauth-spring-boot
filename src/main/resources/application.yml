@@ -1,0 +1,41 @@
+server:
+  port: 5000
+
+google:
+  client:
+    clientId: 902948067952-tp63vo3ulpmieo108ba4q4ne3kkvvrmd.apps.googleusercontent.com
+    clientSecret: y49OKa3CubWVwDixKAgO1WIO
+    accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+    userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+    clientAuthenticationScheme: form
+    scope: profile email
+  resource:
+    userInfoUri:  https://www.googleapis.com/oauth2/v3/userinfo
+
+security:
+  oauth2:
+    client:
+      preEstablishedRedirectUri: http://localhost:5000/
+
+#spring:
+#  profiles.actives: development
+#  jpa:
+#    properties:
+#      hibernate:
+#        formatSql: true
+#        jdbc:
+#          lob:
+#            non-contextual-creation: true
+#    databasePlatform: org.hibernate.dialect.SQLServer2012Dialect
+#    show-sql: true
+#    hibernate:
+#      ddlAuto: create-drop
+#      naming:
+#        implicitStrategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+#  datasource:
+#    platform: sql
+#    url: jdbc:sqlserver://localhost;databaseName=hotspot_db
+#    username: hotspot
+#    password: WelcomeTC@2102HotspotApp
+#    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+#    initialization-mode: always
